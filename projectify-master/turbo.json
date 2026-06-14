@@ -1,0 +1,33 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "globalEnv": [
+    "WEBHOOK_SECRET",
+    "NEXT_PUBLIC_CONVEX_URL",
+    "NEXT_PUBLIC_CONVEX_DEPLOYMENT_SITE",
+    "UNASSIGNED_USER_ID",
+    "MAX_REQUESTS",
+    "NEXT_RUNTIME",
+    "NEXT_PUBLIC_SENTRY_DSN",
+    "KAFKA_BROKER",
+    "KAFKA_USERNAME",
+    "KAFKA_PASSWORD",
+    "CI"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**" , "dist/**"],
+      "env": ["SENTRY_AUTH_TOKEN"]
+    },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "env": ["KAFKA_TOPIC"]
+    }
+  }
+}
