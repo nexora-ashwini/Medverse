@@ -36,7 +36,7 @@ const ChangeLogPreviewPage = () => {
           </p>
         </div>
 
-        {!changelogs.length ? (
+        {!Array.isArray(changelogs) || !changelogs.length ? (
           <div>No changelogs available</div>
         ) : (
           changelogs.map((entry) => (
