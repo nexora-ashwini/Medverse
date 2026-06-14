@@ -15,7 +15,7 @@ const ChangelogList = ({ id }: ProjectId) => {
     return <>Loading...</>;
   }
 
-  if (changelogs.length === 0) {
+  if (!Array.isArray(changelogs) || changelogs.length === 0) {
     return <NoChangelogs />;
   }
 
