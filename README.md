@@ -1,6 +1,5 @@
 # Projectify - Your Project Management, simplified!
 
-![thumbnail](https://raw.githubusercontent.com/vignesh-gupta/projectify/master/apps/web/public/thumbnail.png)
 
 ## Intro
 Welcome to Projectify, the ultimate project management tool designed specifically for small teams. With Projectify, you can manage your projects with ease, without the complexity of traditional project management software. Whether you're handling work items, managing resources, collecting feedback, or keeping track of changes, Projectify has got you covered.
