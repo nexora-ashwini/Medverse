@@ -39,7 +39,7 @@ const ChangeLogPreviewPage = () => {
        {!Array.isArray(changelogs) || !changelogs.length ? (
           <div>No changelogs available</div>
         ) : (
-          changelogs.map((entry) => (
+          (Array.isArray(changelogs) ? changelogs : []).map((entry) => (
             <div key={entry.date} className="grid grid-cols-1 lg:grid-cols-4">
               <div>
                 <div className="lg:sticky lg:pb-16 top-6">
